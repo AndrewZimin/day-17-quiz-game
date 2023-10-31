@@ -8,4 +8,9 @@ class QuizBrain:
         question_text = question_item[self.question_number].text
         print("Please type your answer to the question")
         question_answer = input(f"{question_text}: ")
+        self.question_number += 1
+
+    def still_has_questions(self):
+        return int(self.question_number) < len(self.question_list)
+
 
