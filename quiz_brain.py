@@ -13,4 +13,8 @@ class QuizBrain:
     def still_has_questions(self):
         return int(self.question_number) < len(self.question_list)
 
-
+    def check_answer(self, user_answer, correct_answer):
+        if user_answer.lower == correct_answer.lower:
+            print("Correct!")
+        else:
+            print(f"Wrong... It's {correct_answer}" )
